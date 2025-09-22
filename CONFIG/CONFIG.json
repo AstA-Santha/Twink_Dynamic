@@ -1,0 +1,17 @@
+{
+    "Primary": {
+        "db_host": "localhost",
+        "db_user": "root",
+        "db_pass": "MSeGa@1109",
+		"db_port": "3306"
+    },
+    "Secondary": {
+        "db_host": "192.168.1.10",
+        "db_user": "user2",
+        "db_pass": "secret2",
+		"db_port": "3306"
+    },
+    "Validity":{
+        "Due" : "NA"
+  }
+}
