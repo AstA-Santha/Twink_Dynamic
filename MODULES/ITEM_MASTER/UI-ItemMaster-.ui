@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1083</width>
-    <height>654</height>
+    <width>1100</width>
+    <height>815</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -190,13 +190,13 @@ QComboBox::down-arrow {
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1038</width>
-         <height>584</height>
+         <width>1076</width>
+         <height>766</height>
         </rect>
        </property>
-       <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1">
+       <layout class="QHBoxLayout" name="horizontalLayout" stretch="3,2">
         <item>
-         <widget class="QFrame" name="frame">
+         <widget class="QFrame" name="Item_Frame">
           <property name="frameShape">
            <enum>QFrame::StyledPanel</enum>
           </property>
@@ -232,7 +232,11 @@ QComboBox::down-arrow {
             </widget>
            </item>
            <item row="2" column="1">
-            <widget class="QLineEdit" name="IQLE_ProductID"/>
+            <widget class="QLineEdit" name="IQLE_ProductID">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
            </item>
            <item row="3" column="0">
             <widget class="QLabel" name="label_4">
@@ -305,16 +309,37 @@ QComboBox::down-arrow {
             <widget class="QComboBox" name="IQCB_UOM"/>
            </item>
            <item row="10" column="0">
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>Active</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QComboBox" name="IQCB_Active">
+             <item>
+              <property name="text">
+               <string>Yes</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>No</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="11" column="0">
             <widget class="QLabel" name="label_11">
              <property name="text">
               <string>Stock Avail</string>
              </property>
             </widget>
            </item>
-           <item row="10" column="1">
+           <item row="11" column="1">
             <widget class="QLineEdit" name="IQLE_Stock"/>
            </item>
-           <item row="11" column="0" colspan="2">
+           <item row="12" column="0" colspan="2">
             <widget class="QTableWidget" name="IQTB_StockEntry">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -324,17 +349,65 @@ QComboBox::down-arrow {
              </property>
             </widget>
            </item>
-           <item row="12" column="0" colspan="2">
-            <widget class="QToolButton" name="toolButton">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="text">
-              <string>...</string>
-             </property>
+           <item row="13" column="0" colspan="2">
+            <widget class="QWidget" name="widget" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,1,0,0,1,0,0">
+              <item>
+               <widget class="QCheckBox" name="IQCB_Add">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="IQPB_AddProduct">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="text">
+                 <string>Add</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="line">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="IQCB_Update">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="IQPB_UpdateProduct">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="text">
+                 <string>Update</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="line_2">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="IQPB_DeleteProduct">
+                <property name="text">
+                 <string>Delete</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
           </layout>
@@ -346,8 +419,22 @@ QComboBox::down-arrow {
            <string>Item Master</string>
           </property>
           <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="OQLE_ProductFilter"/>
+           </item>
            <item row="0" column="0">
-            <widget class="QTableView" name="OQTB_Product"/>
+            <widget class="QLabel" name="label_13">
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="QTableView" name="OQTB_Product">
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectRows</enum>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>
@@ -357,16 +444,6 @@ QComboBox::down-arrow {
      </widget>
     </item>
    </layout>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1083</width>
-     <height>26</height>
-    </rect>
-   </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

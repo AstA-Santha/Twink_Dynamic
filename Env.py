@@ -4,7 +4,7 @@ from PyQt5.QtCore import QObject, QEvent
 from PyQt5.QtCore import Qt, pyqtSignal
 from PyQt5.QtWidgets import QApplication, QTableWidget, QTableWidgetItem
 #--- UI Imports ---
-Itm_Mtr = uic.loadUi(fr'{os.path.dirname(os.path.abspath(__file__))}\MODULES\ITEM_MASTER\UI-ItemMaster.ui')
+Itm_Mtr = uic.loadUi(fr'{os.path.dirname(os.path.abspath(__file__))}\MODULES\ITEM_MASTER\UI-ItemMaster-.ui')
 Inv_Mtr = uic.loadUi(fr'{os.path.dirname(os.path.abspath(__file__))}\MODULES\INVOICE_MASTER\UI_InvoiceMaster.ui')
 
 #--- Keyboard Event Functions ---
