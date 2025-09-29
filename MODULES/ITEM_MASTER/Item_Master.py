@@ -1,6 +1,29 @@
-# ldir = fr"G:\GIt Workspsce\Twink_ERP"
-# Itm_Mtr = uic.loadUi(fr'{ldir}\MODULES\ITEM_MASTER\UI-ItemMaster.ui')
+
 from Env import *
+
+##----SQL Database Stucture
+
+# CREATE TABLE `product_info` (
+#   `product_id` int NOT NULL AUTO_INCREMENT,
+#   `barcode_code` int DEFAULT NULL,
+#   `product_name` varchar(45) NOT NULL,
+#   `tamil_name` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+#   `cost_price` float NOT NULL,
+#   `mrp` float DEFAULT '0',
+#   `wholesale` float NOT NULL,
+#   `retail` float NOT NULL,
+#   `uom` varchar(5) NOT NULL,
+#   `active_status` enum('Y','N') NOT NULL,
+#   `gst` float DEFAULT '0',
+#   `stock` int DEFAULT '0',
+#   PRIMARY KEY (`product_id`)
+# ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+##-----------SQL Ends Here-----------
+
+
+
+
 
 @Exception_Handle
 def Item_Master_FN(Itm_Mtr):
